@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  kui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: kui
+    environment:
+      KAFKA_CLUSTERS_0_BOOTSTRAP_SERVERS: k3:9092
+      KAFKA_CLUSTERS_0_NAME: r4zt_wrqTRuT7W2NJsB_GA
+    ports:
+      - 8080:8080
+    networks:
+      - kafka-network
+
+networks:
+  kafka-network:
+    external: true
