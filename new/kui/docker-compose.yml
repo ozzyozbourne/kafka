@@ -1,11 +1,9 @@
-version: '3'
-
 services:
-  kui:
+  kafka-ui:
     image: provectuslabs/kafka-ui:latest
     container_name: kui
     environment:
-      KAFKA_CLUSTERS_0_BOOTSTRAP_SERVERS: 192.168.1.188:9292
+      KAFKA_CLUSTERS_0_BOOTSTRAP_SERVERS: kafka1:9092
       KAFKA_CLUSTERS_0_NAME: r4zt_wrqTRuT7W2NJsB_GA
     ports:
       - 8084:8080
